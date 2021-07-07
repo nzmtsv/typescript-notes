@@ -49,7 +49,7 @@ type marriedEmployee = Pick<Employee, 'userId' | 'isMarried'>
 type UnknownEmployee = {
     [k in keyof Employee]?: Employee[k]
 }
-
+// аналог с использование встроеного Partial
 type UnknownEmployeePartial = Partial<Employee>
 
 
