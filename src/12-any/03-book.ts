@@ -29,7 +29,6 @@ const safeBook = safeParseYaml(`
 `) as Book
 
 // Утверждение типа - это не единственный способ восстановить тип из объекта
-
 function isBook(val: unknown): val is Book { // type predicate
     return (
         typeof(val) === 'object' && val !== null &&

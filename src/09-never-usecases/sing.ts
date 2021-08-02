@@ -32,6 +32,17 @@ function assertNever(value: never): never {
 //     }
 //  }
 
+interface Person {
+    name: string
+}
+
+interface LifeSpan {
+    birth: Date
+    death?: Date
+}
+
+// Не существует ключей, гарантированно принадлежащих значению типа
+type K = keyof (Person | LifeSpan)
 
 
 
