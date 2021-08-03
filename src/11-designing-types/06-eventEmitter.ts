@@ -1,3 +1,5 @@
+// Используйте типобезопасные обертки
+//
 // import EventEmitter from 'events'
 //
 // export default class SafeEmitter<Events extends Record<PropertyKey, unknown[]>> {

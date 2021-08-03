@@ -1,11 +1,22 @@
+// Более точные альтернативы string
+
 type RecordingType = 'studio' | 'live'
 
 interface Album {
-    artist: string,
-    title: string,
-    releaseDate: Date,
+    artist: string
+    title: string
+    releaseDate: Date
     recordingType: RecordingType
 }
+
+const bluesAlbum: Album = {
+    artist: 'Jimmy Hendrix',
+    title: 'foo',
+    releaseDate: new Date('1963-08-17'),
+    recordingType: 'studio',
+}
+
+const albums = [bluesAlbum, bluesAlbum, bluesAlbum]
 
 // извлекает все значения по ключу
 function pluck(records: any[], key: string): any[] {
@@ -13,9 +24,14 @@ function pluck(records: any[], key: string): any[] {
 }
 
 // Введение обобщенного типа
-function pluckGeneric<T>(record: T[], key: keyof T): T[keyof T][] {
-    return record.map(r => r[key])
+function pluckGeneric<T>(records: T[], key: keyof T): T[keyof T][] {
+    return records.map(r => r[key])
 }
 
+const releaseDates = pluckGeneric(albums, 'releaseDate')
+
 // Хотя тип keyof T гораздо уже чем string , он всё еще слишком обширен
+function pluckGenericExtends<T, K extends keyof T>(records: T[], key: K): T[K][] {
+    return records.map(r => r[key])
+}
 

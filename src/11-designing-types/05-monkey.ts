@@ -16,6 +16,9 @@ interface MonkeyDocument extends Document {
 
 (document as MonkeyDocument).monkey = 'Foo'
 
+interface Array<T> {
+    zip<U>(list: U[]): [T, U][]
+}
 
 
 
