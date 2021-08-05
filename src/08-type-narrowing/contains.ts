@@ -1,5 +1,14 @@
 // Старайтесь сужать типы
 
+// Через instanceof
+function contains(text: string, search: string | RegExp) {
+    if (search instanceof RegExp) {
+        return search.exec(text)
+    }
+    search
+    return text.includes(search)
+}
+
 // Сузить отбросом
 const element = document.getElementById('foo')
 if (!element) throw new Error('Unable to find #foo')
@@ -14,15 +23,6 @@ function bar(x?: number | string | null) {
     if (!x) {
        x // сюда может попасть пустая строка или 0
     }
-}
-
-// Через instanceof
-function contains(text: string, search: string | RegExp) {
-    if (search instanceof RegExp) {
-       return search.exec(text)
-    }
-    search
-    return text.includes(search)
 }
 
 // через проверку свойств
