@@ -7,12 +7,12 @@ element.innerHTML = 'Foo'.blink();
 
 const el = document.getElementById('foo')
 if (typeof el === 'object') {
-    el
+    el // может быть и null
 }
 
 function bar(x?: number | string | null) {
     if (!x) {
-       x
+       x // сюда может попасть пустая строка или 0
     }
 }
 
@@ -80,7 +80,7 @@ function getElementContent(el: HTMLElement) {
     return el.textContent
 }
 
-// Общая защита типа
+// Проверка на undefined
 const group = ['Boris', 'Ivan', 'Vasiliy']
 
 const classMates = ['Ivan', 'Michael']

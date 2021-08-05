@@ -28,10 +28,11 @@ function pluckGeneric<T>(records: T[], key: keyof T): T[keyof T][] {
     return records.map(r => r[key])
 }
 
-const releaseDates = pluckGeneric(albums, 'releaseDate')
+const releaseDates = pluckGeneric(albums, 'releaseDate') // returns string | date
 
 // Хотя тип keyof T гораздо уже чем string , он всё еще слишком обширен
 function pluckGenericExtends<T, K extends keyof T>(records: T[], key: K): T[K][] {
     return records.map(r => r[key])
 }
 
+const releaseStringDates = pluckGenericExtends(albums, 'releaseDate') // returns date

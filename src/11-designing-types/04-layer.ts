@@ -16,7 +16,7 @@ interface Layer {
 }
 
 // Есть ли смысл создавать слой, где лэйаут LineLayout, а paint FillPaint?
-interface FillLayer {
+interface FillLayer { // слой заливки
     layout: FillLayout
     paint: FillPaint
 }

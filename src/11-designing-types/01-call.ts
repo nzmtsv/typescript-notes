@@ -14,3 +14,12 @@ function callPoly<T extends unknown[], R>(
 ): R {
     return f(...args)
 }
+
+console.log(Array.from('foo'))
+// expected output: Array ["f", "o", "o"]
+
+function fill(length: number, value: string): string[] {
+    return Array.from({ length }, () => value)
+}
+
+callPoly(fill, 10, 'a') // [ "a", "a", "a", "a", "a", "a", "a", "a", "a", "a" ]

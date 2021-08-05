@@ -23,6 +23,9 @@ interface CameraOptions {
 }
 
 
+// declare function setCamera(camera: CameraOptions): void
+// declare function getCameraOptions(bounds: LngLatBounds): Camera
+//
 // interface LngLat { lng: number; lat: number }
 // type LngLatLike =
 //     | LngLat
@@ -44,6 +47,4 @@ interface CameraOptions {
 //     | { northEast: LngLatLike, southwest: LngLatLike }
 //     | [LngLatLike, LngLatLike]
 //     | [number, number, number, number]
-//
-// declare function setCamera(camera: CameraOptions): void
-// declare function getCameraOptions(bounds: LngLatBounds): Camera
+

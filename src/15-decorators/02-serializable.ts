@@ -2,7 +2,7 @@ type ClassConstructor<T> = new(...args: any[]) => T
 
 function serializable<
     T extends ClassConstructor<{
-        getValue(): string
+        getValue(): string  // класс с методом getValue()
     }>
 >(Constructor: T){
     return class extends Constructor {

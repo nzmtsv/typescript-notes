@@ -1,4 +1,4 @@
-// Используйте типобезопасные подходы при обезьяньем патче
+// Типобезопасные подходы при обезьяньем патче
 
 (document as any).monkey = 'Foo'
 
@@ -7,7 +7,7 @@ interface Document {
     monkey: string
 }
 
-document.monkey = 'Bar'
+// document.
 
 
 interface MonkeyDocument extends Document {

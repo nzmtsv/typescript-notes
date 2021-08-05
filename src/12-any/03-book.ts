@@ -1,4 +1,4 @@
-// Используйте unknown вместо any для значений с неизвестным типом
+// Используйте unknown вместо any для значений с неизвестным типом, чтобы потом уточнить тип
 
 function parseYamlBad (yaml: string): any {
     // ...
@@ -40,8 +40,4 @@ function processValue(val: unknown) {
     if (isBook(val)) {
         val;
     }
-}
-
-function safeParseYamlGeneric<T>(yaml: string): T {
-    return parseYamlBad(yaml)
 }

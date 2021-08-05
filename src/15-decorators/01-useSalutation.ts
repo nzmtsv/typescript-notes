@@ -1,4 +1,4 @@
-type constructor = { new(...args: any[]): {} };
+type constructor = { new(...args: any[]): {} }; // класс с любым конструктором
 
 function useNickName(nickName: string) {
 
