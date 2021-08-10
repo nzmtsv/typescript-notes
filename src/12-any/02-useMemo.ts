@@ -3,7 +3,7 @@
 
 // function shallowEqual<T extends object>(a: T, b: T): boolean {
 //     for (const [key, val] of Object.entries(a)) {
-//         if (!(key in b) || val !== b[key]) {
+//         if (!(key in b) || val !== b[key]) { //
 //             return false
 //         }
 //     }
@@ -21,7 +21,7 @@
 //             lastArgs = args
 //         }
 //         return lastResult;
-//     }
+//     } //
 // }
 
 

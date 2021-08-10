@@ -43,7 +43,7 @@ async function changePage(state: PageState, newPage: string) {
     }
 }
 
-
+// группируем состояния
 interface RequestPending {
     state: 'pending'
 }
