@@ -85,6 +85,7 @@ const classMates = ['Ivan', 'Michael']
     .map((who) => group.find(n => n === who))
     .filter(who => who !== undefined) //  не срабатывает
 
+// общие проверки
 function isDefined<T>(x: T | undefined): x is T {
     return x !== undefined
 }
