@@ -34,7 +34,6 @@ function pickAB(ab: A | B) {
     } else {
         ab
     }
-    ab
 }
 
 // через встроенные функции вроде Array.isArray
@@ -47,7 +46,6 @@ function containsWithIsArray(terms: string | string[]) {
 interface UploadEvent {
     type: 'upload'
     filename: string
-    contents: string
 }
 
 interface DownloadEvent {
